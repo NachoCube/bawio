@@ -1,0 +1,80 @@
+
+body,html {
+  margin: 0;
+  font: bold 25px 'Open Sans', arial, sans-serif;
+  background: #000;
+  color: white;
+}
+
+.icon  {
+  margin-top: 30px;
+  float: left;
+  margin-left: 40px;
+  width: auto;
+  height: 75px;
+  animation: icon-ani 3s;
+}
+
+@keyframes icon-ani {
+  from {transform: rotate(1deg);}
+  50% {transform: rotate(360deg);}
+  to {transform: rotate(1deg);}
+}
+
+ul {
+  margin: 10px auto 0 auto;
+  padding: 0;
+  list-style: none;
+  display: table;
+  width: 600px;
+  float: right;
+  animation: nav-ani 1.3s;
+}
+li {
+  display: table-cell;
+  position: relative;
+  padding: 15px 0;
+  font-size: 23px;
+}
+#a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+#a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+#a:hover:after {
+  width: 100%;
+  left: 0;
+}
+@media screen and (max-height: 300px) {
+	ul {
+		margin-top: 40px;
+	}
+}
+
+@keyframes nav-ani {
+  from {
+    font-size: 0px;
+    opacity: 0;
+  }
+  to {
+   font-size: 22px;
+   opacity: 1;
+  }
+}
